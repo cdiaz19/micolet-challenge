@@ -1,0 +1,24 @@
+development:
+  adapter: postgresql
+  database: micolet-web_development
+  username:
+  password:
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+test:
+  adapter: postgresql
+  database: micoletg-web_test
+  username:
+  password:
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: micolet-web_production
+  username: micolet-web
+  password: <%= ENV['MICOLET-WEB_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

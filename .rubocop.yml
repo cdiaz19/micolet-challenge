@@ -1,0 +1,59 @@
+require: rubocop-rspec
+
+inherit_from:
+  - .rubocop-micolet.yml
+
+Style/Documentation:
+  Enabled: false
+  Exclude:
+    - "app/controllers/**/*"
+    - "app/decorators/**/*"
+    - "app/helpers/**/*"
+    - "app/mailers/**/*"
+    - "app/models/**/*"
+    - "app/serializers/**/*"
+    - "app/policies/**/*"
+    - "app/validators/**/*"
+    - "db/**/*"
+    - "spec/**/*"
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/ModuleLength:
+  Exclude:
+    - "spec/**/*"
+
+RSpec/ExampleLength:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/ParameterLists:
+  Exclude:
+    - "spec/**/*"
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 4
+
+Metrics/AbcSize:
+  Max: 35
